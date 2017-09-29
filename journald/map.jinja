@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{## Start with  defaults from defaults.yaml ##}
+{% import_yaml 'journald/defaults.yaml' as default_settings %}
+
+{# Update settings defaults from pillar data #}
+{% set journald = salt['pillar.get'](
+        'journald',
+        default=default_settings.journald,
+        merge=True
+    )
+%}

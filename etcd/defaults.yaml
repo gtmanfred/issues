@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+etcd:
+  pkg: etcd
+  version: 3.1.9
+  config: '/etc/etcd/etcd.conf'
+  service:
+    name: etcd
+    config: '/usr/lib/systemd/system/etcd.service'
+
+
+  cluster:
+    token: nuance-etcd-cluster
+    peer_port: 2380
+    client_port: 2379
