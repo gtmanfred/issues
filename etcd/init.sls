@@ -4,5 +4,5 @@
 include:
   - etcd.upgrade
   - etcd.install
-  - etcd.config
+#  - etcd.config
   - etcd.service

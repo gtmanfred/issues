@@ -18,6 +18,6 @@ etcd-service:
     - enable: True
     - init_delay: 30
     - watch:
-      - file: {{ etcd_settings.config }}
+      - file: etcd-systemd-conf
 
 
